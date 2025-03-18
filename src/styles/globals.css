@@ -1,42 +1,81 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
+/* Custom Styles */
 body {
-  max-width: 100vw;
-  overflow-x: hidden;
+  @apply bg-gray-900 text-white;
+}
+html {
+  scroll-behavior: smooth;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#projects .swiper-slide {
+  filter: blur(10px); /* Apply blur to all slides */
+  transition: filter 1s ease-in-out;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+#projects .swiper-slide-active {
+  filter: blur(0); /* Remove blur from active slide */
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.swiper-button-prev,
+.swiper-button-next {
+  color: #ff7b00 !important; /* ✅ Change button color */
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px;
+  border-radius: 50%;
+  z-index: 50; /* ✅ Ensure they are clickable */
+  transition: background 0.3s ease-in-out;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  background: rgba(255, 123, 0, 0.6); /* ✅ Change hover color */
+}
+
+/* ✅ Ensure pagination is always visible */
+#projects .custom-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* 🎨 Style the pagination bullets */
+#projects .swiper-pagination-bullet {
+  background-color: #ff7b00 !important; /* ✅ Match your theme */
+  width: 8px;
+  height: 8px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+#projects .swiper-pagination-bullet-active {
+  background-color: #ff7b00 !important;
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+/* Ensure pagination is outside the testimonial cards */
+.testimonials-pagination {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+/* Style the pagination bullets */
+.testimonials-pagination .swiper-pagination-bullet {
+  background-color: #ff7b00 !important; /* Match theme */
+  width: 8px;
+  height: 8px;
+  opacity: 0.5;
+  transition: 0.3s;
+}
+
+.testimonials-pagination .swiper-pagination-bullet-active {
+  background-color: #ff7b00 !important;
+  opacity: 1;
+  transform: scale(1.2);
 }
