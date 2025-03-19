@@ -61,7 +61,7 @@ export default function About() {
           >
             <h3 className="text-2xl font-semibold text-orange-400 mb-3">Specialties</h3>
             <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>⚡ Full Stack Web Development (React, Next.js, Node.js, Express)</li>
+              <li>⚡ Full Stack Web Development (React, Angular, Next.js, Node.js, Express)</li>
               <li>☁️ Cloud Computing (AWS, Docker, Kubernetes, CI/CD Pipelines)</li>
               <li>📈 Scalable Backend Systems & Database Optimization</li>
               <li>🔗 API Design (GraphQL, REST) & Microservices</li>
@@ -80,7 +80,7 @@ export default function About() {
             <h3 className="text-2xl font-semibold text-orange-400 mb-3">Beyond Code</h3>
             <ul className="list-none text-gray-300 space-y-2">
               <li>🎮 Gaming & Tech Innovations</li>
-              <li>🏋️ Fitness & Gym</li>
+              <li>🏋️ Fitness, Sports & Gym</li>
               <li>✈️ Traveling & Exploring New Cultures</li>
             </ul>
           </motion.div>
