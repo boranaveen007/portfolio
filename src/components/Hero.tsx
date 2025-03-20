@@ -1,52 +1,52 @@
 "use client";
 
-import { Canvas } from "@react-three/fiber";
-import {
-  OrbitControls,
-  useGLTF,
-  Environment,
-  Float,
-  Html,
-} from "@react-three/drei";
-import { Suspense, useState, useEffect } from "react";
+// import { Canvas } from "@react-three/fiber";
+// import {
+//   OrbitControls,
+//   useGLTF,
+//   Environment,
+//   Float,
+//   Html,
+// } from "@react-three/drei";
+// import { Suspense, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // ✅ Inline 3D Model Component with Mouse Interaction
-const Model = ({ rotationX, rotationY, positionX, positionY }) => {
-  const gltf = useGLTF("/gaming_room.glb"); // Ensure model.glb is in /public
+// const Model = ({ rotationX, rotationY, positionX, positionY }) => {
+//   const gltf = useGLTF("/gaming_room.glb"); // Ensure model.glb is in /public
 
-  return (
-    <group
-      rotation={[rotationX, rotationY, 0]}
-      position={[positionX, positionY, 0]}
-    >
-      <primitive object={gltf.scene} scale={0.5} />
-    </group>
-  );
-};
+//   return (
+//     <group
+//       rotation={[rotationX, rotationY, 0]}
+//       position={[positionX, positionY, 0]}
+//     >
+//       <primitive object={gltf.scene} scale={0.5} />
+//     </group>
+//   );
+// };
 
 export default function Hero() {
-  const [rotationX, setRotationX] = useState(0);
-  const [rotationY, setRotationY] = useState(0);
-  const [positionX, setPositionX] = useState(0);
-  const [positionY, setPositionY] = useState(0);
+  // const [rotationX, setRotationX] = useState(0);
+  // const [rotationY, setRotationY] = useState(0);
+  // const [positionX, setPositionX] = useState(0);
+  // const [positionY, setPositionY] = useState(0);
 
   // ✅ Track Mouse Movement
-  useEffect(() => {
-    const handleMouseMove = (event) => {
-      const { innerWidth, innerHeight } = window;
-      const x = (event.clientX / innerWidth - 0.5) * 2;
-      const y = (event.clientY / innerHeight - 0.5) * 2;
+  // useEffect(() => {
+  //   const handleMouseMove = (event) => {
+  //     const { innerWidth, innerHeight } = window;
+  //     const x = (event.clientX / innerWidth - 0.5) * 2;
+  //     const y = (event.clientY / innerHeight - 0.5) * 2;
 
-      setRotationX(y * 0.05); // Slight vertical tilt effect
-      setRotationY(x * 0.08); // Slight horizontal tilt effect
-      setPositionX(x * 0.1); // Minor horizontal shift
-      setPositionY(-y * 0.1); // Minor vertical shift (inverted)
-    };
+  //     setRotationX(y * 0.05); // Slight vertical tilt effect
+  //     setRotationY(x * 0.08); // Slight horizontal tilt effect
+  //     setPositionX(x * 0.1); // Minor horizontal shift
+  //     setPositionY(-y * 0.1); // Minor vertical shift (inverted)
+  //   };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, []);
+  //   window.addEventListener("mousemove", handleMouseMove);
+  //   return () => window.removeEventListener("mousemove", handleMouseMove);
+  // }, []);
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
@@ -85,55 +85,55 @@ export default function Hero() {
 </motion.div>
 
       {/* 🎨 3D Model Canvas */}
-      <Canvas
+      {/* <Canvas
         camera={{
           position: [2.9206838954766323, 2.000204859541826, 1.5298145017631266],
           fov: 62,
         }}
         className="w-full h-full"
-      >
-        <Suspense fallback={<LoadingSpinner />}>
+      > */}
+        {/* <Suspense fallback={<LoadingSpinner />}> */}
           {/* 🌌 Environment & Lighting */}
-          <Environment preset="night" />
+          {/* <Environment preset="night" />
           <directionalLight intensity={1.2} position={[3, 5, 5]} />
-          <ambientLight intensity={0.4} />
+          <ambientLight intensity={0.4} /> */}
 
           {/* 🔄 Floating Model (with Mouse Movement) */}
-          <Float speed={1} rotationIntensity={0} floatIntensity={0}>
+          {/* <Float speed={1} rotationIntensity={0} floatIntensity={0}>
             <Model
               rotationX={rotationX}
               rotationY={rotationY}
               positionX={positionX}
               positionY={positionY}
             />
-          </Float>
+          </Float> */}
 
           {/* 🎥 Smooth Camera Controls */}
-          <OrbitControls
+          {/* <OrbitControls
             target={[1, 2, 0]}
             enableZoom={false}
             enableRotate={true}
-            autoRotate={false} // ✅ Explicitly turn off auto-rotation
+            autoRotate={false}
             rotateSpeed={0.5}
             zoomSpeed={0.8}
             minDistance={2}
             maxDistance={8}
-          />
-        </Suspense>
-      </Canvas>
+          /> */}
+        {/* </Suspense>
+      </Canvas> */}
     </section>
   );
 }
 
 // ⏳ Loading Animation
-const LoadingSpinner = () => (
-  <Html center>
-    <div className="flex flex-col items-center">
-      <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-orange-500"></div>
-      <p className="text-white mt-2">Loading Model...</p>
-    </div>
-  </Html>
-);
+// const LoadingSpinner = () => (
+//   <Html center>
+//     <div className="flex flex-col items-center">
+//       <div className="animate-spin rounded-full h-10 w-10 border-t-4 border-orange-500"></div>
+//       <p className="text-white mt-2">Loading Model...</p>
+//     </div>
+//   </Html>
+// );
 
 // "use client";
 
