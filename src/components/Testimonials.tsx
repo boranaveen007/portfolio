@@ -34,6 +34,14 @@ const testimonials = [
     linkedin: "https://www.linkedin.com/in/saketh-kolluri/",
   },
   {
+    name: "Manoj Varma",
+    role: "Technical Lead at Akrivia",
+    feedback:
+      "I worked with Naveen for three years, and he proved to be an exceptional full-stack developer. He delivers clean, efficient code, solves problems creatively, and collaborates effectively. His dedication and hard work make him a valuable asset to any team. I highly recommend him for future opportunities.",
+    image: "/testimonials/manoj_varma.jpg",
+    linkedin: "https://www.linkedin.com/in/manoj-varma-kucharlapati-b1106a119/",
+  },
+  {
     name: "Vindhya Sampathi Rao",
     role: "Software Development Engineer at Akrivia",
     feedback:

@@ -36,7 +36,6 @@ const isWebGLAvailable = () => {
 };
 
 export default function Hero() {
-
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
   const [positionX, setPositionX] = useState(0);

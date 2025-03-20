@@ -23,7 +23,9 @@ export default function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-3xl font-semibold text-orange-400 mb-4">Work Experience</h3>
+          <h3 className="text-3xl font-semibold text-orange-400 mb-4">
+            Work Experience
+          </h3>
           <div className="space-y-6">
             <div>
               <h4 className="text-xl font-semibold text-white">
@@ -31,13 +33,34 @@ export default function Resume() {
               </h4>
               <p className="text-gray-400">July 2019 – July 2023</p>
               <ul className="list-disc list-inside text-gray-300 mt-2 space-y-2">
-                <li>Developed high-performing HCM features using Angular, Node.js, Express.js, NestJS, MySQL, MongoDB, and AWS.</li>
-                <li>Reduced operational costs by 20% and increased user satisfaction by 40% through optimized system performance.</li>
-                <li>Enhanced decision-making efficiency by 25% via advanced analytics modules.</li>
-                <li>Implemented AWS services (S3, Lambda) improving system scalability and performance by 40%.</li>
-                <li>Optimized real-time data processing with Apache Kafka, improving responsiveness and scalability.</li>
-                <li>Developed GraphQL APIs, reducing server response time by 25% and improving data retrieval efficiency.</li>
-                <li>Led a team of junior developers, improving overall team productivity by 30%.</li>
+                <li>
+                  Developed high-performing HCM features using Angular, Node.js,
+                  Express.js, NestJS, MySQL, MongoDB, and AWS.
+                </li>
+                <li>
+                  Reduced operational costs by 20% and increased user
+                  satisfaction by 40% through optimized system performance.
+                </li>
+                <li>
+                  Enhanced decision-making efficiency by 25% via advanced
+                  analytics modules.
+                </li>
+                <li>
+                  Implemented AWS services (S3, Lambda) improving system
+                  scalability and performance by 40%.
+                </li>
+                <li>
+                  Optimized real-time data processing with Apache Kafka,
+                  improving responsiveness and scalability.
+                </li>
+                <li>
+                  Developed GraphQL APIs, reducing server response time by 25%
+                  and improving data retrieval efficiency.
+                </li>
+                <li>
+                  Led a team of junior developers, improving overall team
+                  productivity by 30%.
+                </li>
               </ul>
             </div>
           </div>
@@ -50,11 +73,15 @@ export default function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-3xl font-semibold text-orange-400 mb-4">Skills</h3>
+          <h3 className="text-3xl font-semibold text-orange-400 mb-4">
+            Skills
+          </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-gray-300">
             {/* Frontend */}
             <div>
-              <h4 className="text-xl text-white font-semibold mb-2">Frontend</h4>
+              <h4 className="text-xl text-white font-semibold mb-2">
+                Frontend
+              </h4>
               <ul className="list-disc list-inside space-y-1">
                 <li>React.js, Next.js, Angular</li>
                 <li>Redux, Tailwind CSS, Bootstrap</li>
@@ -74,7 +101,9 @@ export default function Resume() {
 
             {/* Cloud & DevOps */}
             <div>
-              <h4 className="text-xl text-white font-semibold mb-2">Cloud & DevOps</h4>
+              <h4 className="text-xl text-white font-semibold mb-2">
+                Cloud & DevOps
+              </h4>
               <ul className="list-disc list-inside space-y-1">
                 <li>AWS (Lambda, S3, SNS, SQS, EC2)</li>
                 <li>Docker, Kubernetes, CI/CD</li>
@@ -84,7 +113,9 @@ export default function Resume() {
 
             {/* Tools & Technologies */}
             <div>
-              <h4 className="text-xl text-white font-semibold mb-2">Tools & Technologies</h4>
+              <h4 className="text-xl text-white font-semibold mb-2">
+                Tools & Technologies
+              </h4>
               <ul className="list-disc list-inside space-y-1">
                 <li>Apache Kafka, OAuth, Redis Streams</li>
                 <li>Agile (SCRUM), Jira, Git</li>
@@ -101,15 +132,25 @@ export default function Resume() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
         >
-          <h3 className="text-3xl font-semibold text-orange-400 mb-4">Education</h3>
+          <h3 className="text-3xl font-semibold text-orange-400 mb-4">
+            Education
+          </h3>
           <div className="space-y-4">
             <div>
-              <h4 className="text-xl font-semibold text-white">Master’s in Computer and Information Sciences</h4>
-              <p className="text-gray-400">University of Cincinnati | GPA: 3.97</p>
+              <h4 className="text-xl font-semibold text-white">
+                Master’s in Computer and Information Sciences
+              </h4>
+              <p className="text-gray-400">
+                University of Cincinnati | GPA: 3.97
+              </p>
             </div>
             <div>
-              <h4 className="text-xl font-semibold text-white">Bachelor’s in Computer Science and Engineering</h4>
-              <p className="text-gray-400">Raghu Engineering College | GPA: 3.70</p>
+              <h4 className="text-xl font-semibold text-white">
+                Bachelor’s in Computer Science and Engineering
+              </h4>
+              <p className="text-gray-400">
+                Raghu Engineering College | GPA: 3.70
+              </p>
             </div>
           </div>
         </motion.div>

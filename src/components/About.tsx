@@ -5,7 +5,10 @@ import Image from "next/image";
 
 export default function About() {
   return (
-    <section id="about" className="relative flex items-center justify-center min-h-screen py-16 px-2 bg-transparent">
+    <section
+      id="about"
+      className="relative flex items-center justify-center min-h-screen py-16 px-2 bg-transparent"
+    >
       {/* 💬 Content */}
       <motion.div
         className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-12 p-12 bg-white/5 backdrop-blur-md shadow-lg rounded-3xl border border-white/20"
@@ -22,7 +25,13 @@ export default function About() {
             visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
           }}
         >
-          <Image src="/profile.jpg" alt="Naveen" width={288} height={288} className="object-cover" />
+          <Image
+            src="/profile.jpg"
+            alt="Naveen"
+            width={288}
+            height={288}
+            className="object-cover"
+          />
         </motion.div>
 
         {/* 📜 Bio + Experience */}
@@ -46,23 +55,36 @@ export default function About() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            I’m a <span className="text-orange-400 font-semibold">Software Engineer</span> passionate about building
-            high-performance web apps, cloud solutions, and DevOps pipelines. With expertise in{" "}
-            <strong>Full Stack Development, Cloud, and Automation</strong>, I love solving complex problems and creating seamless digital experiences.
+            I’m a{" "}
+            <span className="text-orange-400 font-semibold">
+              Software Engineer
+            </span>{" "}
+            passionate about building high-performance web apps, cloud
+            solutions, and DevOps pipelines. With expertise in{" "}
+            <strong>Full Stack Development, Cloud, and Automation</strong>, I
+            love solving complex problems and creating seamless digital
+            experiences.
           </motion.p>
 
           {/* 🎯 Specialties */}
           <motion.div
-            className="mt-6"
+            className="mt-8"
             variants={{
               hidden: { opacity: 0, y: 50 },
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            <h3 className="text-2xl font-semibold text-orange-400 mb-3">Specialties</h3>
+            <h3 className="text-2xl font-semibold text-orange-400 mb-3">
+              Specialties
+            </h3>
             <ul className="list-disc list-inside text-gray-300 space-y-2">
-              <li>⚡ Full Stack Web Development (React, Angular, Next.js, Node.js, Express)</li>
-              <li>☁️ Cloud Computing (AWS, Docker, Kubernetes, CI/CD Pipelines)</li>
+              <li>
+                ⚡ Full Stack Web Development (React, Angular, Next.js, Node.js,
+                Express)
+              </li>
+              <li>
+                ☁️ Cloud Computing (AWS, Docker, Kubernetes, CI/CD Pipelines)
+              </li>
               <li>📈 Scalable Backend Systems & Database Optimization</li>
               <li>🔗 API Design (GraphQL, REST) & Microservices</li>
               <li>🛠️ Performance Optimization & Agile Development</li>
@@ -77,7 +99,9 @@ export default function About() {
               visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
             }}
           >
-            <h3 className="text-2xl font-semibold text-orange-400 mb-3">Beyond Code</h3>
+            <h3 className="text-2xl font-semibold text-orange-400 mb-3">
+              Beyond Code
+            </h3>
             <ul className="list-none text-gray-300 space-y-2">
               <li>🎮 Gaming & Tech Innovations</li>
               <li>🏋️ Fitness, Sports & Gym</li>

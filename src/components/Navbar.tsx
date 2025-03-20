@@ -25,7 +25,10 @@ export default function Navbar() {
         const element = document.getElementById(section);
         if (element) {
           const { offsetTop, offsetHeight } = element;
-          if (scrollPosition >= offsetTop && scrollPosition < offsetTop + offsetHeight) {
+          if (
+            scrollPosition >= offsetTop &&
+            scrollPosition < offsetTop + offsetHeight
+          ) {
             foundSection = section;
           }
         }
@@ -39,7 +42,13 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? "bg-gray-900/80 backdrop-blur-lg shadow-lg" : "bg-transparent"}`}>
+    <nav
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+        scrolled
+          ? "bg-gray-900/80 backdrop-blur-lg shadow-lg"
+          : "bg-transparent"
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo (Takes user to Home) */}
         <Link href="#home" className="text-2xl font-bold text-orange-400">
@@ -53,7 +62,9 @@ export default function Navbar() {
               key={section}
               href={`#${section}`}
               className={`text-lg transition-all duration-300 ${
-                activeSection === section ? "text-orange-400 font-semibold" : "text-white hover:text-orange-400"
+                activeSection === section
+                  ? "text-orange-400 font-semibold"
+                  : "text-white hover:text-orange-400"
               }`}
             >
               {section.charAt(0).toUpperCase() + section.slice(1)}
@@ -63,7 +74,10 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         <div className="md:hidden">
-          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white text-2xl">
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-white text-2xl"
+          >
             {menuOpen ? <FiX /> : <FiMenu />}
           </button>
         </div>
@@ -81,7 +95,9 @@ export default function Navbar() {
                 key={section}
                 href={`#${section}`}
                 className={`block text-lg py-2 transition-all duration-300 ${
-                  activeSection === section ? "text-orange-400 font-semibold" : "text-white hover:text-orange-400"
+                  activeSection === section
+                    ? "text-orange-400 font-semibold"
+                    : "text-white hover:text-orange-400"
                 }`}
                 onClick={() => setMenuOpen(false)}
               >

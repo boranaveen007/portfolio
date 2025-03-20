@@ -3,7 +3,12 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCoverflow, Pagination, Navigation, EffectCards } from "swiper/modules";
+import {
+  EffectCoverflow,
+  Pagination,
+  Navigation,
+  EffectCards,
+} from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/effect-cards";
@@ -47,31 +52,75 @@ const projects = [
     github: "https://github.com/boranaveen007/JobFitPro",
   },
   {
-    title: "Chrome Tab Manager Extension",
+    title: "Real-Time Driver Drowsiness Detection System",
     description:
-      "A Chrome extension to efficiently manage and organize browser tabs, improving productivity.",
-    images: ["/projects/TabManagerExtension/tabmanager.png"],
-    techStack: ["TypeScript", "Chrome Extension API", "Tailwind CSS"],
+      "A real-time driver drowsiness detection system that monitors fatigue using computer vision and ML models to alert drivers and prevent accidents.",
+    images: ["/projects/DriverDrowsiness/driverDrowsiness.png"],
+    techStack: [
+      "Python",
+      "OpenCV",
+      "TensorFlow",
+      "Keras",
+      "PyTorch",
+      "SciPy",
+      "NumPy",
+      "Playsound",
+      "Pygame",
+    ],
     liveDemo: "",
-    github: "https://github.com/boranaveen007/tab-manager-extension",
+    github: "",
   },
   {
-    title: "New Project",
+    title: "PUBG Winner Prediction Using ML",
     description:
-      "A newly added project to demonstrate the Swiper Coverflow effect.",
-    images: ["/projects/NewProject/newproject.png"],
-    techStack: ["Next.js", "Tailwind CSS", "Node.js"],
+      "Training a model to predict the winner in a PUBG game using a dataset of 87,899 player stats, leveraging a linear regression algorithm for accuracy.",
+    images: ["/projects/PubgWinner/pubg.jpeg"],
+    techStack: [
+      "Python",
+      "Pandas",
+      "NumPy",
+      "Scikit-learn",
+      "Matplotlib",
+      "Seaborn",
+      "Jupyter Notebook",
+      "Linear Regression",
+    ],
     liveDemo: "",
-    github: "https://github.com/example/new-project",
+    github: "",
   },
   {
-    title: "Chrome Tab Manager Extension",
+    title: "Blackjack Game with GUI",
     description:
-      "A Chrome extension to efficiently manage and organize browser tabs, improving productivity.",
-    images: ["/projects/TabManagerExtension/tabmanager.png"],
-    techStack: ["TypeScript", "Chrome Extension API", "Tailwind CSS"],
+      "A Python-based Blackjack card game that simulates player-dealer interactions, following traditional game rules with random card distribution.",
+    images: ["/projects/BlackJack/blackjack.png"],
+    techStack: [
+      "Python",
+      "Pygame",
+      "Random Library",
+      "OOP (Object-Oriented Programming)",
+      "GUI Development",
+    ],
     liveDemo: "",
-    github: "https://github.com/boranaveen007/tab-manager-extension",
+    github: "",
+  },
+  {
+    title: "Political Sentiment Analysis",
+    description:
+      "A web-based system that filters comments and classifies political sentiments as positive, negative, or neutral using NLP techniques.",
+    images: ["/projects/PoliticalSentimentAnalysis/psa_diagram.png"],
+    techStack: [
+      "Python",
+      "JavaScript",
+      "React.js/Angular",
+      "NLTK",
+      "TextBlob",
+      "VADER Sentiment Analysis",
+      "TensorFlow",
+      "MongoDB",
+      "Bootstrap",
+    ],
+    liveDemo: "",
+    github: "",
   },
 ];
 
@@ -197,13 +246,15 @@ export default function Projects() {
                       Live Demo
                     </a>
                   )}
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="px-3 py-1 bg-gray-700 border border-gray-500 text-gray-300 text-sm rounded-lg"
-                  >
-                    GitHub
-                  </a>
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      className="px-3 py-1 bg-gray-700 border border-gray-500 text-gray-300 text-sm rounded-lg"
+                    >
+                      GitHub
+                    </a>
+                  )}
                 </div>
               </div>
             </SwiperSlide>

@@ -7,7 +7,9 @@ export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
 
   // ✅ Handle form input change
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -23,13 +25,18 @@ You can reply to me at: ${form.email}
 `;
 
     window.open(
-      `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`,
+      `mailto:${email}?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(body)}`,
       "_blank"
     );
   };
 
   return (
-    <section id="contact" className="min-h-screen flex flex-col items-center justify-center py-16 px-4">
+    <section
+      id="contact"
+      className="min-h-screen flex flex-col items-center justify-center py-16 px-4"
+    >
       <motion.div
         className="max-w-2xl w-full bg-white/5 backdrop-blur-md p-8 rounded-2xl shadow-lg border border-white/20"
         initial={{ opacity: 0, y: 50 }}
