@@ -1,19 +1,16 @@
-// import type { NextConfig } from "next";
-
-// const nextConfig: NextConfig = {
-//   /* config options here */
-//   reactStrictMode: true,
-// };
-
-// export default nextConfig;
 /** @type {import('next').NextConfig} */
+const isGithubPages = process.env.GITHUB_ACTIONS || process.env.NEXT_PUBLIC_GITHUB; // Detects GitHub Pages
+
 const nextConfig = {
-  output: "export", // Enables static export
+  reactStrictMode: true,
   images: {
-    unoptimized: true, // Required for Next.js static export
+    unoptimized: isGithubPages, // Use unoptimized images only for GitHub Pages
   },
-  basePath: "/portfolio", // Replace with your GitHub repo name
-  assetPrefix: "/portfolio/", // Replace with your GitHub repo name
+  ...(isGithubPages && {
+    output: "export",
+    basePath: "/portfolio", // Replace with GitHub repo name
+    assetPrefix: "/portfolio/",
+  }),
 };
 
 module.exports = nextConfig;

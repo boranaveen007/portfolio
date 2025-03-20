@@ -91,7 +91,7 @@ export default function Testimonials() {
         >
           {testimonials.map((testimonial, index) => (
             <SwiperSlide key={`${testimonial.name}-${index}`}>
-              <div className="bg-white/5 backdrop-blur-md shadow-lg rounded-2xl border border-white/20 p-6 flex flex-col items-center text-center h-96">
+              <div className="bg-white/5 backdrop-blur-md shadow-lg rounded-2xl border border-white/20 p-6 flex flex-col items-center text-center hmin-h-[320px] md:min-h-[350px] lg:min-h-[380px]">
                 {/* 🖼️ Profile Image (Clickable) */}
                 <a
                   href={testimonial.linkedin}
@@ -102,8 +102,8 @@ export default function Testimonials() {
                     <Image
                       src={testimonial.image}
                       alt={testimonial.name}
-                      width={64}
-                      height={64}
+                      width={72}
+                      height={72}
                       className="rounded-full object-cover"
                       priority={index === 0} // First image loads first
                     />
