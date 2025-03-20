@@ -66,7 +66,7 @@ export default function Hero() {
   transition={{ duration: 1 }}
 >
   <h1 className="text-5xl md:text-6xl font-bold text-white drop-shadow-lg">
-    Hi, I'm <span className="text-orange-400">Naveen</span>
+    {"Hi, I'm"} <span className="text-orange-400">Naveen</span>
   </h1>
   <p className="text-lg text-gray-300 drop-shadow-md mt-2">
     Software Engineer | Full Stack Developer | Cloud & DevOps Enthusiast
