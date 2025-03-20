@@ -8,7 +8,7 @@ import {
   Float,
   Html,
 } from "@react-three/drei";
-import { Suspense, useRef, useState, useEffect } from "react";
+import { Suspense, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 // ✅ Inline 3D Model Component with Mouse Interaction
@@ -51,12 +51,12 @@ export default function Hero() {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
       {/* 🔵 Background Gradient */}
-      <motion.div
+      {/* <motion.div
         className="absolute inset-0 bg-gradient-to-b from-blue-900 via-gray-900 to-black"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-      />
+      /> */}
 
       {/* 🎯 Heading & Subtitle (Your Profile Info) */}
       <motion.div
