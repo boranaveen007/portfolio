@@ -36,19 +36,7 @@ const isWebGLAvailable = () => {
 };
 
 export default function Hero() {
-  const [webGLSupported, setWebGLSupported] = useState(true);
 
-  useEffect(() => {
-    setWebGLSupported(isWebGLAvailable());
-  }, []);
-
-  if (!webGLSupported) {
-    return (
-      <p className="text-center text-red-400">
-        ⚠️ WebGL is not supported in your browser.
-      </p>
-    );
-  }
   const [rotationX, setRotationX] = useState(0);
   const [rotationY, setRotationY] = useState(0);
   const [positionX, setPositionX] = useState(0);
@@ -70,6 +58,20 @@ export default function Hero() {
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
+
+  const [webGLSupported, setWebGLSupported] = useState(true);
+
+  useEffect(() => {
+    setWebGLSupported(isWebGLAvailable());
+  }, []);
+
+  if (!webGLSupported) {
+    return (
+      <p className="text-center text-red-400">
+        ⚠️ WebGL is not supported in your browser.
+      </p>
+    );
+  }
 
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden">
