@@ -48,7 +48,7 @@ const projects = [
       "Python",
       "Open-source LLMs",
     ],
-    liveDemo: "https://jobfitpro.vercel.app",
+    liveDemo: "https://job-fit-pro.vercel.app",
     github: "https://github.com/boranaveen007/JobFitPro",
   },
   {

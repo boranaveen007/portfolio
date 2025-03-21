@@ -13,7 +13,7 @@ const testimonials = [
     name: "Prasuna Rajagiri",
     role: "Associate Staff Engineer at Nagarro",
     feedback:
-      "Working with Naveen was a great experience. His expertise in full-stack development and cloud solutions helped us scale our project seamlessly.",
+      "I worked with Naveen for over three years, and his adaptability and teamwork stood out. He tackled challenges with a solution-oriented mindset, contributed to project success, and brought a positive, collaborative attitude. His dedication and professionalism left a lasting impact.",
     image: "/testimonials/prasuna_rajagiri.jpg",
     linkedin: "https://www.linkedin.com/in/gnani-prasuna/",
   },
