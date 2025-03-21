@@ -135,13 +135,13 @@ export default function Hero() {
           {/* 🎥 Smooth Camera Controls */}
           <OrbitControls
             target={[1, 2, 0]}
-            enableZoom={false}
+            enableZoom={true}
             enableRotate={true}
             autoRotate={false} // ✅ Explicitly turn off auto-rotation
             rotateSpeed={0.5}
             zoomSpeed={0.8}
             minDistance={2}
-            maxDistance={8}
+            maxDistance={10}
           />
         </Suspense>
       </Canvas>
