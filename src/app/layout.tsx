@@ -14,12 +14,12 @@ export const metadata = {
   ],
   openGraph: {
     title: "Naveen Bora | Full Stack Developer",
-    description: "Explore Naveen Bora’s portfolio featuring JobFitPro, BFF APIs, AI tools and modern frontend projects using React, Next.js, and Tailwind.",
+    description: "description: Hi, I'm Naveen Bora – a Full Stack Developer crafting modern web apps and intelligent tools like JobFitPro. Specializing in BFF architecture, GraphQL APIs, and scalable UI experiences with React, Angular and Next.js.",
     url: "https://naveen-bora.vercel.app",
     siteName: "Naveen Bora Portfolio",
     images: [
       {
-        url: "https://naveen-bora.vercel.app/og-preview.jpg",
+        url: "https://naveen-bora.vercel.app/profile.jpg",
         width: 800,
         height: 800,
         alt: "Naveen Bora – Full Stack Developer"
